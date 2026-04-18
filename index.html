@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BizGrow Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>BizGrow Pro</h1>
+    <p>Advanced Digital Marketing & Support Platform for Small Businesses</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#add">Add Product</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Order</a>
+    <button class="darkbtn" onclick="toggleDarkMode()">🌙 Dark</button>
+</nav>
+
+<section id="home" class="hero">
+    <div>
+        <h2>Make Your Business Online & Professional</h2>
+        <p>
+            BizGrow Pro is a unique platform where small business owners can add products,
+            promote them digitally and receive customer orders directly through WhatsApp.
+        </p>
+        <button onclick="scrollToSection('add')">Add Product Now</button>
+    </div>
+</section>
+
+<section id="add" class="box">
+    <h2>Add Your Product (Business Owner)</h2>
+
+    <form id="productForm">
+        <label>Owner Name</label>
+        <input type="text" id="owner" required>
+
+        <label>Product Name</label>
+        <input type="text" id="pname" required>
+
+        <label>Price</label>
+        <input type="text" id="price" required>
+
+        <label>Category</label>
+        <select id="category" required>
+            <option value="Food">Food</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Service">Service</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Product Description</label>
+        <textarea id="desc" rows="3" required></textarea>
+
+        <button type="submit">Add Product</button>
+    </form>
+
+    <p id="successMsg"></p>
+</section>
+
+<section id="products" class="box">
+    <h2>Available Products</h2>
+
+    <div class="filter">
+        <input type="text" id="search" placeholder="Search product...">
+        <select id="filterCategory">
+            <option value="All">All</option>
+            <option value="Food">Food</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Service">Service</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div id="productList" class="grid"></div>
+</section>
+
+<section id="contact" class="box">
+    <h2>Customer Order Form</h2>
+
+    <form onsubmit="sendWhatsApp(event)">
+        <label>Your Name</label>
+        <input type="text" id="cname" required>
+
+        <label>Your Mobile</label>
+        <input type="text" id="cmobile" required>
+
+        <label>Product Name</label>
+        <input type="text" id="cproduct" required>
+
+        <label>Quantity</label>
+        <input type="text" id="cqty" required>
+
+        <label>Delivery Address</label>
+        <textarea id="caddress" rows="3" required></textarea>
+
+        <button type="submit">Send Order on WhatsApp</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 BizGrow Pro | Community Engagement Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
